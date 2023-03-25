@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body{
+    font-family: 'Share Tech Mono', monospace;
+    color: #353535;
+}
+
+nav #logo{
+   width: 35vw;
+   margin-left: 15%;
+}
+
+nav #bookhub{
+    width: 12vw;
+    display: inline;
+    float: right;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+.cards{
+    display: flex;
+    margin-top: 7%;
+    gap: 5%;
+    margin-bottom: 10%;
+}
+
+.card{
+    width: 42%;
+    background-color: #F7F8F8;
+}
+
+.top-card{
+    padding: 3% 0 0 5%;
+    height: 10vh;
+}
+
+.top-card h2{
+    font-size: 1.3em;
+    display: inline;
+    float: left;
+}
+
+.top-card button{
+    display: inline;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #F7F8F8;
+    font-size: 1.5em;
+    color: #646464;
+    margin-right: 2%;
+}
+.top-card button:hover{
+    background-color: #EFF0F0;
+    transition: 0.4s;
+}
+
+.element{
+    height: 100px;
+    padding-left: 4%;
+}
+.element:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 0.4s;
+}
+.info-book{
+    display: inline;
+    float: left;
+}
+
+.action-buttons{
+    display: inline;
+    float: right;
+    margin: 5% 5% 0 0;
+}
+
+.action-buttons button{
+    height: 20px;
+    width: 20px;
+    border: none;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#edit{
+    background-color:#FFF090; 
+}
+
+#edit:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#delete{
+    background-color:#FFCECE; 
+}
+#delete:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/register.css" media="screen" />
+    <title>Novo Livro</title>
+</head>
+<body>
+    
+    <div class="left">
+        <img id="logo" src="img/logo.png" alt="">
+        <img id="toread" src="img/toread.png" alt="">
+    </div>
+
+    <div class="right">
+        <h1>Adicionar Livro</h1>
+        <form action="">
+            <input id="title" class="estilinho" type="text" placeholder="Título"><br>
+            <input id="input2" class="estilinho"  type="text"placeholder="Autor(a)">
+            <input id="input3" class="estilinho"  type="text" placeholder="Editora"><br>
+            <input id="input4" class="estilinho"  type="text" placeholder="Lançamento">
+            <select id="input5" class="estilinho"  name="typeList">
+                <option value="0">Selecione</option>
+                <option value="readBook">JÁ LI</option>
+                <option value="wishList" selected>QUERO LER</option>
+            </select><br><br><br>
+            <a href="index.html">Voltar</a>
+            <button type="button" id="save">Salvar</button>
+        </form>
+
+
+    </div><br><br>
+    <br><br><br>
+
+    
+</body>
+
+<script src="js/postBooks.js"></script>
+</html>
