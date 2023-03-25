@@ -7,10 +7,10 @@ const responseModel = {
 const connection = require('./connection');
 module.exports = {
     async create(req, res) {
-        const response = {...responseModel}
+        const response = {...responseModel};
 
-        const { bookCode, title, author, publisher, releaseYear } = req.body; 
-        const [, affectedRows] = await connection.query(`INSERT INTO books (bookCode, title, author, publisher, releaseYear) VALUES (${bookCode}, '${title}', '${author}', '${publisher}', ${releaseYear})`);   
+        const { title, author, publisher, releaseYear, typeList } = req.body; 
+        const [, affectedRows] = await connection.query(`INSERT INTO books (title, author, publisher, releaseYear, typeList) VALUES ('${title}', '${author}', '${publisher}', ${releaseYear}, '${typeList}')`);   
     
         if (affectedRows >= 0) {
             response.success = true;
@@ -20,6 +20,11 @@ module.exports = {
 
     async getAll(req, res) {
         const [, data] = await connection.query(`SELECT * FROM books`);   
+        return res.json(data);
+    },
+
+    async getAllWishList(req, res) {
+        const [, data] = await connection.query(`SELECT * FROM books WHERE typeList = 'wishList'`);   
         return res.json(data);
     },
 

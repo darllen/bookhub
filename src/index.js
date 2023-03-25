@@ -1,5 +1,5 @@
 const express = require('express');
-const bookhub = express();
+const cors = require('cors');
 require('dotenv').config();
 
 const protocolo = process.env.PROTOCOL || "http";
@@ -9,8 +9,11 @@ const porta = process.env.PORT || 3030;
 
 const routes = require('./routes');
 
+const bookhub = express();
+bookhub.use(cors());
 bookhub.use(express.json());
-bookhub.use(routes)
+bookhub.use(routes);
 
 
 bookhub.listen(porta, () => console.log(`Server started in http://localhost:${porta} or ${protocolo}://${ip_adress}:${porta}`));
+
